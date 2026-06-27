@@ -1,0 +1,15 @@
+{
+  "name": "idle_core",
+  "type": "module",
+  "version": "0.1.0",
+  "files": [
+    "idle_core_bg.wasm",
+    "idle_core.js",
+    "idle_core.d.ts"
+  ],
+  "main": "idle_core.js",
+  "types": "idle_core.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}

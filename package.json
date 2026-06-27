@@ -1,0 +1,28 @@
+{
+  "name": "idle-colony-mvp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "typecheck": "vue-tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "wasm:build": "wasm-pack build core --target web --out-dir ../src/wasm/idle_core",
+    "rust:test": "cargo test --manifest-path core/Cargo.toml",
+    "check": "npm run rust:test && npm test && npm run build"
+  },
+  "dependencies": {
+    "@vitejs/plugin-vue": "latest",
+    "pixi.js": "latest",
+    "vite": "latest",
+    "vue": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "typescript": "latest",
+    "vitest": "latest",
+    "vue-tsc": "latest"
+  }
+}
