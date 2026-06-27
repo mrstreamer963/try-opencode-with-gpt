@@ -28,6 +28,10 @@ describe('game view model', () => {
     expect(rejectionMessage('Occupied')).toBe('This tile is already occupied.');
   });
 
+  it('maps unknown worker rejections to a safe visible fallback', () => {
+    expect(rejectionMessage('WorkerError')).toBe('Command failed: WorkerError');
+  });
+
   it('keeps rejection feedback visible until the hold expires', () => {
     expect(canReplaceHeldFeedback(1_000, 1_500)).toBe(false);
     expect(canReplaceHeldFeedback(1_500, 1_500)).toBe(true);

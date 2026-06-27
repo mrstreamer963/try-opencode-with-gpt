@@ -48,7 +48,7 @@ export interface StateSnapshot {
 
 export type CoreEvent =
   | { type: 'StateSnapshot'; snapshot: StateSnapshot }
-  | { type: 'CommandRejected'; reason: CommandRejection }
+  | { type: 'CommandRejected'; reason: CommandRejection | string }
   | { type: 'ConstructionStarted'; job_id: number };
 
 export type WorkerCommand =
